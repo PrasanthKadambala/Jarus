@@ -1,0 +1,67 @@
+﻿@model apijarus.Models.Quote
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div>
+    <h4>Quote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.quote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DropDownListFor(model => model.Status, new SelectList(Model.quoteStatus, "Value", "Text"), htmlAttributes: new { @class = "form-control", id = "Text" })
+            @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuoteDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuoteDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EffectiveDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EffectiveDate)
+        </dd>
+
+         <dd>
+            @Html.DisplayFor(model => model.QuoteType)
+            @Html.RadioButtonFor(model => model.QuoteType, "Basic")Basic - $680.00
+            @Html.RadioButtonFor(model => model.QuoteType, "Preferred")Preferred - $850.00
+            @Html.RadioButtonFor(model => model.QuoteType, "Premier")Premier - $1050.00
+        </dd>
+
+        
+
+    </dl>
+</div>
+
+@{
+    Html.RenderAction("search", "Home");
+}
+
+

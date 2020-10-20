@@ -1,0 +1,46 @@
+﻿@model IEnumerable<apijarus.Models.AdditionalInsured>
+
+
+<div>
+    <h4>AdditionalInsured</h4>
+    <hr />
+
+@foreach (var item in Model) {
+    <dl class="dl-horizontal">
+       
+        <dt>
+           @Html.Label("First Name")  
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.AdditionalInsuredName)
+        </dd>
+
+        <dt>
+            @Html.Label("Date of Birth")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.AdditionalInsuredDOB)
+        </dd>
+
+        <dt>
+            @Html.Label("Coverage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.AdditionalInsuredCoverage)
+        </dd>
+
+    </dl>
+}
+
+    @*@using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    }*@
+</div>

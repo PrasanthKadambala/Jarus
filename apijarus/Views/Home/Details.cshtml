@@ -1,0 +1,33 @@
+﻿@model IEnumerable<apijarus.Models.Person>
+
+
+<p>@ViewBag.ErrorMessage</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("First Name") 
+        </th>
+        <th>
+            @Html.Label("Last Name") 
+        </th>
+        <th>
+            @Html.Label("Add to Quote")
+            
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonDOB)
+        </td>
+        <td>
+            @Html.ActionLink("Select", "Delete", new { id = item.PersonId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model apijarus.Models.Person
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>  
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#submitSearch").click(function () {
+            if ($("#ValidateFirstName").val() == "") {
+                alert("Enter First Name");
+                return false;
+            }
+            if ($("#ValidateLastName").val() == "") {
+                alert("Enter Last Name");
+                return false;
+            }
+        });
+    });
+</script>
+
+
+@using (Html.BeginForm("Details", "Home", FormMethod.Post))
+{
+    <p>
+        @Html.Label("FirstName") : @Html.TextBoxFor(m => m.PersonFirstName, null, new
+                              {
+                                  @class = "form-control",
+                                  @id = "ValidateFirstName"
+                              })
+        
+    </p>
+    <p>
+        @Html.Label("LastName") : @Html.TextBoxFor(m => m.PersonLastName, null, new
+                              {
+                                  @class = "form-control",
+                                  @id = "ValidateLastName"
+                              })
+   </p>
+    <p>
+        <input type="submit" value="Search" id="submitSearch" />
+    </p>
+}
+@*@{
+    Html.RenderAction("Details", "Home");
+}*@
