@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apijarus", "apijarus\apijarus.csproj", "{50BCEF20-9BFE-46DB-A307-DD1CB314F15F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarusWebApplication", "JarusWebApplication\JarusWebApplication.csproj", "{03D3970C-064B-48A7-BF98-55FAEE175E3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{50BCEF20-9BFE-46DB-A307-DD1CB314F15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50BCEF20-9BFE-46DB-A307-DD1CB314F15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50BCEF20-9BFE-46DB-A307-DD1CB314F15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D3970C-064B-48A7-BF98-55FAEE175E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D3970C-064B-48A7-BF98-55FAEE175E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D3970C-064B-48A7-BF98-55FAEE175E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D3970C-064B-48A7-BF98-55FAEE175E3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
